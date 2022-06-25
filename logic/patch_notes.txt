@@ -1,0 +1,5 @@
+1.0.1
+Added the version checker when entering the game and in the Options menu.
+
+1.0.0
+Made the whole game with a lot of bugs and things we better not talk about...

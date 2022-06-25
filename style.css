@@ -1,0 +1,253 @@
+@font-face {
+	src: url("fonts/ARDARLING.ttf");
+	font-family: "AR DARLING";
+}
+@font-face {
+	src: url("fonts/ARBERKLEY.ttf");
+	font-family: "AR BERKLEY";
+}
+@font-face {
+	src: url("fonts/Palatino Linotype.ttf");
+	font-family: "Palatino Linotype";
+}
+
+:root {
+	--bgline: #381500;
+	--yellow: #FFD600;
+	--outline: #363636;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	background-image: linear-gradient(-26deg, black, var(--bgline), black);
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 20px;
+}
+li::before {
+	content: "";
+	display: inline-block;
+	height: 64px;
+	width: 64px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-right: 15px;
+	background-position: center center;
+	vertical-align: bottom;
+}
+li {
+	color: white;
+	font-family: Arial, serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+#construct::before { background-image: url("Construct2.png"); }
+#unity::before { background-image: url("Unity.png"); }
+
+.games {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0;
+}
+.game {
+	margin: 0 0 15px 32px;
+	width: 180px;
+	height: 180px;
+	position: relative;
+
+	text-align: center;
+
+	background-color: var(--outline);
+	border: 8px solid var(--outline);
+}
+.game:hover {
+	outline: 1px solid var(--yellow);
+	box-shadow: 0 0 32px var(--yellow);
+	cursor: pointer;
+}
+.game:active {
+	outline-width: 2px;
+	box-shadow: 0 0 50px var(--yellow);
+}
+.game img {
+	position: relative;
+	height: 128px;
+	width: 128px;
+	object-fit: cover;
+
+	border: 4px solid var(--outline);
+
+	display: block;
+	background-color: var(--outline);
+}
+.game img::before {
+	color: white;
+	font-weight: bold;
+	font-size: 32px;
+	font-family: Arial, serif;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.title {
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	margin: 2px 0;
+	font-size: 24px;
+
+	background-color: var(--outline);
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+.game:hover .title { border-color: var(--yellow); }
+.icons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 32px;
+	height: 128px;
+	margin-top: 4px;
+	margin-right: 4px;
+
+	color: #F0F0F0;
+	font-family: FontAwesome, serif;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 32px;
+}
+.icons > span {
+	text-shadow:
+			1px 1px 1px black,
+			-1px 1px 1px black,
+			1px -1px 1px black,
+			-1px -1px 1px black;
+}
+.icon-computer:before { content: "\e4e5";}
+.icon-mobile:before { content: "\f3cd";}
+.icon-download:before { content: "\f019";}
+.icon-online:before { content: "\f0ac";}
+.icon-silent:before { content: "\f6a9";}
+.icon-multi:before { content: "\f500";}
+.icon-finished:before { content: "\f058";}
+.icon-under-development:before { content: "\f085";}
+#maki {
+	font-family: IMPACT, serif;
+	color: #803B00;
+}
+#boing {
+	font-family: Segoe UI, serif;
+	color: #0000FF;
+}
+#autorunner {
+	font-family: Arial, serif;
+	color: #000000;
+	font-weight: bold;
+	font-style: italic;
+}
+#car {
+	font-family: "AR BERKLEY", serif;
+	color: #00FF00;
+}
+#pong {
+	font-family: "Segoe Script", serif;
+	color: #FFFFFF;
+}
+#racer {
+	font-family: "Segoe Script", serif;
+	color: #FF9900;
+	font-style: italic;
+}
+#epicfight {
+	font-size: 20px;
+	font-family: "Lucida Console", serif;
+	color: #FF33FF;
+	font-weight: bold;
+	font-style: italic;
+}
+#classshooter {
+	font-size: 20px;
+	font-family: "Palatino Linotype", serif;
+	color: #000000;
+}
+#classshooter > span { color: #FFFF00; }
+#thedarklibrary {
+	font-size: 18px;
+	font-family: "AR DARLING", serif;
+	color: #FFFFFF;
+}
+#thedarklibrary > span {
+	text-shadow:
+			0 0 15px white,
+			0 0 25px white;
+}
+#oozeinvasion {
+	font-size: 20px;
+	font-family: Arial, serif;
+	color: #FF0000;
+	font-weight: bold;
+	text-shadow: -1.5px 1px black;
+}
+#hallobab, #game {
+	font-family: Arial, serif;
+	color: #FFFFFF;
+}
+#logic {
+	font-size: 28px;
+	font-family: "AR DARLING", serif;
+	color: #FF00FF;
+	text-shadow:
+    		-1px -1px 0 #00FFFF,
+    		1px -1px 0 #00FFFF,
+    		-1px 1px 0 #00FFFF,
+    		1px 1px 0 #00FFFF;
+}
+
+#legend {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: 266px;
+	padding: 5px;
+
+	z-index: 1;
+
+	background-color: var(--outline);
+
+	color: #F0F0F0;
+	font-family: FontAwesome, serif;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 32px;
+	text-align: left;
+}
+#legend:hover { cursor: pointer; }
+td:nth-child(1) { text-align: center; }
+td:nth-child(2) {
+	font-family: Arial, serif;
+	padding-left: 0;
+	opacity: 0;
+	font-size: 0;
+	visibility: collapse;
+
+	transition-property: padding-left, opacity, font-size, visibility;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+.icon-computer + td:before { content: "Playable on a computer"; }
+.icon-mobile + td:before { content: "Playable on a mobile"; }
+.icon-download + td:before { content: "Must be downloaded"; }
+.icon-online + td:before { content: "Playable in a browser"; }
+.icon-silent + td:before { content: "Has no sound"; }
+.icon-multi + td:before { content: "Can be played by two players"; }
+.icon-finished + td:before { content: "Finished game"; }
+.icon-under-development + td:before { content: "The game is under development"; }

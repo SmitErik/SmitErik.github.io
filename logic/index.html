@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<link rel="icon" href="Icon.png" type="image/gif" sizes="32x32">
+	<title>Logic</title>
+	<link rel="stylesheet" href="../header.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="header">
+		<span onclick="window.location.href = '..'">$mitE Games</span>
+		<div onclick="window.location.href = '../about.html'" class="logo"></div>
+	</div>
+
+	<table>
+		<tbody>
+			<tr>
+				<td colspan="3">
+					<img src="Eddy.png" alt="Eddy" id="eddy">
+				</td>
+			</tr>
+			<tr>
+				<td class="left">
+					<img src="Lily.png" alt="Lily" id="lily">
+				</td>
+				<td rowspan="2" class="textarea center">
+					<img src="Logic.png" alt="Logic" id="title">
+					<div class="content">
+						<hr class="top-hr">
+						<p class="text">Latest version: <b class="big" id="version"></b></p>
+						<div onclick="window.location.href = 'https://drive.google.com/drive/folders/1i_uX624-9yZ3vNiFrFF98xjZnpT9GeW5?usp=sharing'" class="button">
+							<span>Download</span>
+							<div id="light"></div>
+						</div>
+						<p>I couldn't give you the professional way of download Logic, but here's a Google Drive link where you can safely get the game.</p>
+						<div id="patches">
+						</div>
+					</div>
+				</td>
+				<td class="right">
+					<img src="Bob.png" alt="Bob" id="bob">
+				</td>
+			</tr>
+			<tr>
+				<td class="left bottom">
+					<img src="Jack.png" alt="Jack" id="jack">
+				</td>
+				<td class="right bottom">
+					<img src="Roby.png" alt="Roby" id="roby">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+<script>
+	fetch('patch_notes.txt').then(x => x.text()).then(x => {
+		let lines = x.split('\n');
+		document.getElementById('version').innerHTML = lines[0];
+
+		let patches = '<hr>';
+
+		for(let i = 0; i < lines.length; i++) {
+			switch (i % 3) {
+				case 0:
+					patches += '\n<span class="patch"><b class="big">' + lines[i];
+					break;
+				case 1:
+					patches += '</b> ~ ' + lines[i] + '</span>';
+					break;
+				case 2:
+					patches += '<hr>';
+					break;
+			}
+		}
+
+		document.getElementById('patches').innerHTML = patches;
+	})
+</script>
+
+</html>

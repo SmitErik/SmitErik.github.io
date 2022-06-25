@@ -1,0 +1,31 @@
+﻿{
+	"version": 1480842830,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-2.1.1.min.js",
+		"images/background.png",
+		"images/player-sheet0.png",
+		"images/player-sheet1.png",
+		"images/platform-sheet0.png",
+		"images/coin-sheet0.png",
+		"images/coin-sheet1.png",
+		"images/coin-sheet2.png",
+		"images/rightarrow-sheet0.png",
+		"images/movearrowright-sheet0.png",
+		"images/movearrowleft-sheet0.png",
+		"images/scroll1-sheet0.png",
+		"media/boing.ogg",
+		"media/iiiiiii.ogg",
+		"media/cry.ogg",
+		"media/boiing.ogg",
+		"media/cryy.ogg",
+		"media/iiiiiiiii.ogg",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png"
+	]
+}
