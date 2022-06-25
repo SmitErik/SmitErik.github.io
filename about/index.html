@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  	<link rel="icon" href="Logo.png" type="image/gif" sizes="32x32">
+  	<link rel="icon" href="../Logo.png" type="image/gif" sizes="32x32">
   	<title>$mitE</title>
-	<link rel="stylesheet" href="header.css">
-	<link rel="stylesheet" href="about.css">
+	<link rel="stylesheet" href="../header.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
 	<div class="header">
-		<span onclick="window.location.href = '.'">$mitE Games</span>
-		<div onclick="window.location.href = 'about.html'" class="logo"></div>
+		<a href="..">$mitE Games</a>
+		<a href=""><div class="logo"></div></a>
 	</div>
 
 	<div class="content">
@@ -37,12 +37,11 @@
 			Here's my second game too, called 'Game'. I said, that I'm such a creative guy. But after these little
 			clumsiness, I started creating my masterpiece.</p>
 
-			<p>'Logic'. Such a creative name, once again. But apart from its name, 'Logic' is the work of my life. I am
-			proud to say that I made this game. From the beginning to the end. But unfortunately it hasn't got an end
-			yet. I still need to work on it. After 3 long years (with breaks here and there) I still haven't finished
-			it... That's pretty sad. But in my defense, I had a lot of other stuff to do too. Eg school, university,
-			etc... Okay, it's true that I bit off more than one can chew... But still... It should be finished
-			sometime.</p>
+			<p>'Logic'. It is the work of my life. I am proud to say that I made this game. From the beginning to the
+			end. But unfortunately it hasn't got an end yet. I still need to work on it. After 3 long years (with
+			breaks here and there) I still haven't finished it... That's pretty sad. But in my defense, I had a lot of
+			other stuff to do too. Eg school, university, etc... Okay, it's true that I bit off more than one can
+			chew... But still... It should be finished sometime.</p>
 
 			<p>So that's why I decided to bring myself and continue to work on 'Logic'. It has to be done. Once I
 			start, I have to finish it. So in the near future if you see that the patch list is not changing, contact
@@ -51,7 +50,7 @@
 			<ul>
 				<li id="email">E-mail: <u onclick="copy('e')">eriksmit2001@gmail.com<span class="tooltip" id="e">Text copied!</span></u></li>
 				<li id="discord">Discord: <u onclick="copy('d')">$mitE#5364<span class="tooltip" id="d">Text copied!</span></u></li>
-				<li id="youtube">YouTube: <u onclick="goto('https://www.youtube.com/channel/UCvKk_anNB9mQgCPbYKtSyrw')">https://www.youtube.com/channel/UCvKk_anNB9mQgCPbYKtSyrw</u></li>
+				<li id="youtube">YouTube: <a href="https://www.youtube.com/channel/UCvKk_anNB9mQgCPbYKtSyrw">https://www.youtube.com/channel/UCv...</a></li>
 			</ul>
 		</article>
 	</div>
@@ -88,10 +87,6 @@
 
 			new Promise(resolve => setTimeout(resolve, 300)).then(() => document.getElementById(text).style.visibility = 'hidden');
 		});
-	}
-
-	function goto(link) {
-		window.location.href = link;
 	}
 </script>
 

@@ -39,10 +39,11 @@
     outline: 0.025em solid white;
     box-shadow: 0 0 0.3em white;
 }
-.header > span {
+.header > a:first-child {
     color: var(--yellow);
     font-family: Arial, serif;
     font-weight: bold;
+    text-decoration: none;
     position: relative;
     float: left;
     top: 50%;
@@ -54,11 +55,11 @@
             -0.05em 0.05em 0 var(--outline),
             0.05em 0.05em 0 var(--outline);
 }
-.header > span:hover {
+.header > a:first-child:hover {
     text-shadow: 0 0 0.5em white;
     cursor: pointer;
 }
-.header > span:active {
+.header > a:first-child:active {
     text-shadow:
             0 0 0.5em white,
             0 0 0.7em white;

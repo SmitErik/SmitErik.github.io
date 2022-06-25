@@ -1,4 +1,7 @@
-:root { --bgline: #381500; }
+:root {
+	--bgline: #381500;
+	--color: #F0F0F0;
+}
 
 body {
 	height: 100%;
@@ -11,7 +14,7 @@ body {
 
 .content {
 	font-family: "Times New Roman", serif;
-	color: #F0F0F0;
+	color: var(--color);
 	text-align: center;
 }
 
@@ -38,7 +41,6 @@ li:before {
 	width: 1.5em;
 }
 #youtube {
-	width: 90%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -55,18 +57,19 @@ li:before {
 	width: 1.55em;
 }
 
-u {
+li :is(u, a) {
+	color: var(--color);
 	text-decoration: none;
 	position: relative;
 }
-u:hover {
+li :is(u, a):hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
 
 .tooltip {
 	visibility: hidden;
-	width: 330px;
+	width: 200px;
 	background-color: #555;
 	color: #fff;
 	text-align: center;
@@ -75,9 +78,9 @@ u:hover {
 
 	position: absolute;
 	z-index: 1;
-	bottom: 90%;
+	bottom: 130%;
 	left: 50%;
-	margin-left: -50%;
+	transform: translateX(-50%);
 
 	opacity: 0;
 	transition: opacity 0.3s;
