@@ -5,6 +5,7 @@
 	<title>Logic</title>
 	<link rel="stylesheet" href="../header.css">
 	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
 </head>
 
 <body>
@@ -27,8 +28,8 @@
 				<td rowspan="2" class="textarea center">
 					<img src="Logic.png" alt="Logic" id="title">
 					Trailer: <a href="https://youtu.be/ihEZWWHHKN0">https://youtu.be/ihEZWWHHKN0</a>
+					<hr>
 					<div class="content">
-						<hr class="top-hr">
 						<p class="text">Latest version: <b class="big" id="version"></b></p>
 						<a href="https://drive.google.com/drive/folders/1i_uX624-9yZ3vNiFrFF98xjZnpT9GeW5?usp=sharing" class="button">
 							<span>Download</span>
@@ -54,30 +55,5 @@
 		</tbody>
 	</table>
 </body>
-
-<script>
-	fetch('patch_notes.txt').then(x => x.text()).then(x => {
-		let lines = x.split('\n');
-		document.getElementById('version').innerHTML = lines[0];
-
-		let patches = '<hr>';
-
-		for(let i = 0; i < lines.length; i++) {
-			switch (i % 3) {
-				case 0:
-					patches += '\n<span class="patch"><b class="big">' + lines[i];
-					break;
-				case 1:
-					patches += '</b> ~ ' + lines[i] + '</span>';
-					break;
-				case 2:
-					patches += '<hr>';
-					break;
-			}
-		}
-
-		document.getElementById('patches').innerHTML = patches;
-	})
-</script>
 
 </html>
