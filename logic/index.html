@@ -65,12 +65,7 @@
 		let listNumber = 0;
 
 		for(let i = 0; i < lines.length; i++) {
-
-			console.log(lines[i].length + "  |  " + lines[i]);
-
-			if (lines[i].length <= 1) {
-				console.log(0);
-
+			if (lines[i].length === 0 || lines[i].length === 1 && lines[i].charAt(0) !== ':') {
 				if (!list)
 					patches += '</span>';
 				patches += '<hr>';
@@ -78,15 +73,10 @@
 				continue;
 			}
 
-			if (lines[i].charAt(0) >= 0 && lines[i].charAt(0) <= 9) {
-				console.log(1);
-
+			if (lines[i].charAt(0) >= 0 && lines[i].charAt(0) <= 9)
 				patches += '\n<span class="patch"><b class="big">' + lines[i] + '</b> ~ ';
-			}
 
 			else if (lines[i].charAt(0) === ':') {
-				console.log(2);
-
 				if (!list)
 					patches += '<u class="dropdown closed" id="' + listNumber + '" onclick="dropdown(' + listNumber + ')"></u></span><ul id="list' + (listNumber++) + '">';
 				else
@@ -96,8 +86,6 @@
 			}
 
 			else {
-				console.log(3);
-
 				if (list)
 					patches += '<li>' + lines[i] + '</li>';
 				else
