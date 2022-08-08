@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="header.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<script src="script.js"></script>
 </head>
 
 <body>
@@ -190,5 +189,32 @@
 		</tbody>
 	</table>
 </body>
-	
+
+<script>
+	let legend = document.getElementById('legend'),
+			rows = legend.children[0].children,
+			closed = true;
+
+	function openLegend() {
+		if (closed)
+			for (let i = 0; i < rows.length; i++) {
+				let text = rows[i].children[1];
+				text.style.paddingLeft = '10px';
+				text.style.opacity = '1';
+				text.style.fontSize = 'inherit';
+				text.style.visibility = 'visible';
+			}
+		else
+			for (let i = 0; i < rows.length; i++) {
+				let text = rows[i].children[1];
+				text.style.paddingLeft = '0';
+				text.style.opacity = '0';
+				text.style.fontSize = '0';
+				text.style.visibility = 'collapse';
+			}
+
+		closed = !closed;
+	}
+</script>
+
 </html>

@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="../header.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<script src="script.js"></script>
 </head>
 
 <body>
@@ -69,6 +68,22 @@
 			document.getElementById('age').innerHTML = (year - 2002).toString();
 		else
 			document.getElementById('age').innerHTML = (year - 2001).toString();
+	}
+
+	function copy(text) {
+		if (text === 'e')
+			navigator.clipboard.writeText('eriksmit2001@gmail.com');
+		else if (text === 'd')
+			navigator.clipboard.writeText('$mitE#5364');
+
+		document.getElementById(text).style.opacity = '1';
+		document.getElementById(text).style.visibility = 'visible';
+
+		new Promise(resolve => setTimeout(resolve, 1200)).then(() => {
+			document.getElementById(text).style.opacity = '0';
+
+			new Promise(resolve => setTimeout(resolve, 300)).then(() => document.getElementById(text).style.visibility = 'hidden');
+		});
 	}
 </script>
 
