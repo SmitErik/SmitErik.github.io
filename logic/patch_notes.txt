@@ -1,3 +1,12 @@
+1.0.5
+Fixed Bob and Jack's Unique abilities and reworked the Push mechanic
+:
+From now on, Bob can only move the Red Cube forwards and backwards
+Jack will now always pull the Yellow Cube towards him and grab it when it gets close
+From now on, you cannot move to the side while Pushing
+If the Red Cube is not standing straight, it slowly adjusts itself to a straight position when Pushed
+:
+
 1.0.3
 Lot of bug fixes.
 :
