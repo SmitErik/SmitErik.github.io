@@ -1,4 +1,4 @@
-1.0.5
+1.0.4
 Fixed Bob and Jack's Unique abilities and reworked the Push mechanic
 :
 From now on, Bob can only move the Red Cube forwards and backwards
