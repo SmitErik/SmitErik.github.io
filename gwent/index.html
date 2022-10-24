@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Gwent Classic</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
+    <script>
+        var GlobalUnityInstance = null;
+    </script>
+</head>
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=900 height=600></canvas>
@@ -105,7 +108,8 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-          loadingBar.style.display = "none";
+            loadingBar.style.display = "none";
+            parent.GlobalUnityInstance = unityInstance;
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
