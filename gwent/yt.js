@@ -11,11 +11,12 @@ function onYouTubeIframeAPIReady() {
             "version": 3
         }
     });
-}
 
-function toggleMusic() {
-    if (youtube.getPlayerState() !== YT.PlayerState.PLAYING)
-        youtube.playVideo();
-    else
-        youtube.pauseVideo();
+    youtube.playVideo();
+    let timer = setInterval(() => {
+        if (youtube.getPlayerState() !== YT.PlayerState.PLAYING)
+            youtube.playVideo();
+        else
+            clearInterval(timer);
+    }, 500);
 }
