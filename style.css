@@ -62,8 +62,8 @@ li::before {
 	padding: 0;
 }
 .game {
-	margin: 0 0 2vh 2vw;
-	width: 17vh;
+	margin: 0 0 2vh 1.9vw;
+	width: 16vh;
 	height: 17vh;
 	position: relative;
 
@@ -87,7 +87,7 @@ li::before {
 	width: 12vh;
 	object-fit: cover;
 
-	border: 0.4vh solid var(--outline);
+	margin-bottom: 0.8vh;
 
 	display: block;
 	background-color: var(--outline);
@@ -222,7 +222,7 @@ li::before {
 	background-color: transparent !important;
 	border-style: none !important;
 
-	margin: 0 0 1vh 1vh;
+	margin-left: 1vh;
 
 	-webkit-filter: drop-shadow(-0.4vh 0.4vh 0.1vh black);
 	filter: drop-shadow(-0.4vh 0.4vh 0.1vh black);
