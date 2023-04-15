@@ -1,4 +1,4 @@
-fetch('patch_notes.txt').then(x => x.text()).then(x => {
+fetch('patch_notes').then(x => x.text()).then(x => {
     let lines = x.split('\n');
     document.getElementById('version').innerHTML = lines[0];
 
