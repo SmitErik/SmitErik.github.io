@@ -54,6 +54,7 @@ li::before {
 	vertical-align: bottom;
 }
 #construct::before { background-image: url("Construct2.png"); }
+#jquery::before { background-image: url("jQuery.png"); }
 #unity::before { background-image: url("Unity.png"); }
 
 .games {
@@ -199,6 +200,16 @@ li::before {
 	color: #FF0000;
 	font-weight: bold;
 	text-shadow: -0.3vh 0.2vh black;
+}
+#bejeweled {
+	font-size: 1.35vh;
+	font-family: "Goudy Stout", serif;
+	color: #c8e78b;
+	font-style: italic;
+	text-shadow:
+			0.1vh 0.1vh 0.15vh black,
+			0 0 1.5vh blue,
+			0 0 1vh #ffff00;
 }
 #hallobab, #game {
 	font-family: Arial, serif;
