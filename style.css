@@ -7,12 +7,16 @@
 	font-family: "AR BERKLEY";
 }
 @font-face {
-	src: url("fonts/Palatino Linotype.ttf");
-	font-family: "Palatino Linotype";
-}
-@font-face {
 	src: url("fonts/Copperplate Gothic Bold Regular.ttf");
 	font-family: "Copperplate Gothic";
+}
+@font-face {
+	src: url("fonts/Goudy Stout.ttf");
+	font-family: "Goudy Stout";
+}
+@font-face {
+	src: url("fonts/Palatino Linotype.ttf");
+	font-family: "Palatino Linotype";
 }
 
 :root {

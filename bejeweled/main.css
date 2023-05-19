@@ -1,3 +1,12 @@
+@font-face {
+    src: url("../fonts/Bookman Old Style.ttf");
+    font-family: "Bookman Old Style";
+}
+@font-face {
+    src: url("../fonts/Goudy Stout.ttf");
+    font-family: "Goudy Stout";
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -53,11 +62,17 @@ body {
     box-shadow: 0 0 1.5vh 0.5vh rgba(255, 255, 255, 0.5);
 }
 
-.window {
+.windows {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    width: 86%;
+    transform: translate(8%, -50%);
 
+    display: flex;
+    justify-content: space-between;
+    row-gap: 5vh;
+}
+.window {
     height: 50vh;
     width: 30vw;
 
@@ -73,7 +88,6 @@ body {
     color: black;
 }
 
-#menu { left: 5vw; }
 #menu > div { margin: 8vh 5vh; }
 #menu span { display: block; }
 
@@ -198,6 +212,28 @@ footer {
     font-size: 2vh;
 }
 footer:before, footer:after { content: "*"; }
+
+@media only screen and (max-width: 118vh) {
+    #created_by { color: rgba(0, 0, 0, 0); }
+
+    .windows { flex-direction: column; }
+
+    .window {
+        height: 30vh;
+        width: 80vw;
+        transform: translateX(-2.5vh);
+    }
+
+    #menu > div { margin: 3vh 8vw; }
+
+    #leaderboard > span {
+        font-size: 3vh;
+    }
+
+    .record > span { font-size: 1.5vh; }
+
+    footer { font-size: 2vw; }
+}
 
 /**********************************************************************************************************************/
 
@@ -526,13 +562,6 @@ canvas { position: absolute; }
     .history_element:nth-of-type(n + 6) { display: none; }
 
     .gem_icon { height: 3vw; }
-}
-
-@media only screen and (max-width: 118vh) {
-    #created_by { color: rgba(0, 0, 0, 0); }
-
-    #leaderboard > span { font-size: 3.4vw; }
-    .record > span { font-size: 2.5vw; }
 }
 
 @media only screen and (max-width: 92.5vh) {

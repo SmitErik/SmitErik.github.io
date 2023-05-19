@@ -5,6 +5,7 @@
     <meta name="keywords" content="Bejeweled,SmitE,$mitE">
     <meta name="author" content="$mitE">
     <meta name="description" content="The recreation of the Bejeweled game(s) for multimedia course project work.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="icon" href="images/gems/0.png" type="image/gif" sizes="32x32">
     <title>Bejeweled</title>
     <link rel="stylesheet" href="main.css">
@@ -15,18 +16,21 @@
     <div id="title">BEJEWELED</div>
     <div id="created_by">Created by: <a href="https://smiterik.github.io" id="smite"></a></div>
     <div id="main">
-        <div id="menu" class="window" style="display: block; opacity: 1;">
-            <div id="player">
-                <label for="player_name">Player Name:</label>
-                <input type="text" id="player_name"  maxlength="20">
+        <div class="windows">
+            <div id="menu" class="window">
+                <div id="player">
+                    <label for="player_name">Player Name:</label>
+                    <input type="text" id="player_name"  maxlength="20">
+                </div>
+                <div id="play_button" class="button">PLAY</div>
+                <div id="quit_button" class="button">QUIT</div>
             </div>
-            <div id="play_button" class="button">PLAY</div>
-            <div id="quit_button" class="button">QUIT</div>
+            <div id="leaderboard" class="window">
+                <span>LEADERBOARD</span>
+                <div id="board"></div>
+            </div>
         </div>
-        <div id="leaderboard" class="window">
-            <span>LEADERBOARD</span>
-            <div id="board"></div>
-        </div>
+
         <footer>
             I do not own any of the original Bejeweled games. I made this game only and exclusively for the project of my multimedia course and for fun!
         </footer>
