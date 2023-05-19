@@ -158,6 +158,8 @@ input {
 }
 
 #game_over {
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -217,8 +219,7 @@ footer:before, footer:after { content: "*"; }
     #created_by { color: rgba(0, 0, 0, 0); }
 
     .windows { flex-direction: column; }
-
-    .window {
+    .windows > .window {
         height: 30vh;
         width: 80vw;
         transform: translateX(-2.5vh);
@@ -229,7 +230,6 @@ footer:before, footer:after { content: "*"; }
     #leaderboard > span {
         font-size: 3vh;
     }
-
     .record > span { font-size: 1.5vh; }
 
     footer { font-size: 2vw; }
