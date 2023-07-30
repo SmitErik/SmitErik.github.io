@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="Data/icon.ico">
+    <link rel="stylesheet" href="Data/style.css">
+    <title>VB</title>
+</head>
+<body>
+    <div id="unity-container">
+        <canvas id="unity-canvas"></canvas>
+        <span id="unity-loading-text">Loading: 0%</span>
+    </div>
+    <script src="Build/vb.loader.js"></script>
+    <script>
+        var canvas = document.querySelector("#unity-canvas");
+        var loadingText = document.querySelector("#unity-loading-text")
+
+        var config = {
+            dataUrl: "Build/vb.data.gz",
+            frameworkUrl: "Build/vb.framework.js.gz",
+            codeUrl: "Build/vb.wasm.gz",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "_mitE",
+            productName: "VB",
+            productVersion: "0.1",
+        };
+
+
+    createUnityInstance(canvas, {
+            dataUrl: "Build/vb.data.gz",
+            frameworkUrl: "Build/vb.framework.js.gz",
+            codeUrl: "Build/vb.wasm.gz",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "_mitE",
+            productName: "VB",
+            productVersion: "0.1",
+            devicePixelRatio: 1,
+        }, (progress) => {
+            loadingText.innerHTML = "Loading: " + Math.ceil(progress) * 100 + "%";
+        }).then(_ => {
+            loadingText.style.display = "none";
+        }).catch((message) => {
+            alert(message);
+        });
+    </script>
+</body>
+</html>
