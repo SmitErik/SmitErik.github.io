@@ -10,7 +10,7 @@
 <body>
     <div id="unity-container">
         <canvas id="unity-canvas"></canvas>
-        <span id="unity-loading-text">Loading: 0%</span>
+        <span id="unity-loading-text">Betöltés...</span>
     </div>
     <script src="Build/vb.loader.js"></script>
     <script>
@@ -38,7 +38,6 @@
             productVersion: "0.1",
             devicePixelRatio: 1,
         }, (progress) => {
-            loadingText.innerHTML = "Loading: " + Math.ceil(progress) * 100 + "%";
         }).then(_ => {
             loadingText.style.display = "none";
         }).catch((message) => {
