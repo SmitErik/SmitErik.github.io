@@ -1,8 +1,18 @@
+1.1.2
+Quality of life changes
+:
+Various UI animations have been modified so they now behave the same
+Fixed some camera movements in the Main Menu so they now work as intended
+Fixed a bug that would cause the game to freeze if you try to pause it before the selected level is properly loaded
+Changes have been made to some Hard levels, making them a shade easier to solve
+Miscellaneous other small updates and bug fixes
+:
+
 1.1.1
 Numerous bug fixes and some minor quality changes.
 
 1.1.0
-Patch: Boss
+Patch: Boss.
 :
 Finished the very last level
 Music added. Finally
