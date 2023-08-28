@@ -144,6 +144,7 @@ li::before {
 .icon-mobile:before { content: "\f3cd";}
 .icon-download:before { content: "\f019";}
 .icon-online:before { content: "\f0ac";}
+.icon-steam:before { content: "\f1b6";}
 .icon-silent:before { content: "\f6a9";}
 .icon-multi:before { content: "\f500";}
 .icon-finished:before { content: "\f058";}
@@ -277,6 +278,7 @@ td:nth-child(2) {
 .icon-computer + td:before { content: "Playable on a computer"; }
 .icon-mobile + td:before { content: "Playable on a mobile"; }
 .icon-download + td:before { content: "Must be downloaded"; }
+.icon-steam + td:before { content: "Steam game"; }
 .icon-online + td:before { content: "Playable in a browser"; }
 .icon-silent + td:before { content: "Has no sound"; }
 .icon-multi + td:before { content: "Can be played by two players"; }
