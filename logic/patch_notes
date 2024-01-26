@@ -1,12 +1,28 @@
+1.2.2
+Multiple bug fixes and performane optimalizations.
+:
+Fixed a bug where it wasn't properly detected if there was a ceiling above the Player.
+Fixed a bug where Jack would not always pull the selected object towards him.
+Fixed a bug where Eddy couldn't use his character ability in some situations.
+Fixed a bug that prevented Eddy's funny unique animation from playing.
+Fixed a bug where if the frequency of speech was set during a Level, it wasn't immediately applied to the game.
+Character Speech is renamed to Frequency of Speech in the Audio sub-settings to make the name more descriptive.
+Fixed a bug where the default values for Settings did not match the actual default values.
+Unnecessary code snippets have been removed from multiple locations, and various minor optimizations and performance enhancements have been implemented.
+:
+
+1.2.1
+Level design changes on Hard6, Hard8 and Hard9 levels. Stars are now easier to obtain and general level difficulties have been adjusted.
+
 1.2.0
-Logic's release on Steam
+Logic's release on Steam.
 :
 The save technique has been replaced with a Steam Cloud compatible one
 Steam Achievements have been created and added to the game
 :
 
 1.1.2
-Quality of life changes
+Quality of life changes.
 :
 Various UI animations have been modified so they now behave the same
 Fixed some camera movements in the Main Menu so they now work as intended
