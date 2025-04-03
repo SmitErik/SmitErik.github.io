@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Bejeweled,SmitE,$mitE">
+    <meta name="author" content="$mitE">
+    <meta name="description" content="The recreation of the Bejeweled game(s) for multimedia course project work.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="images/gems/0.png" type="image/gif" sizes="32x32">
+    <title>Bejeweled</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="title">BEJEWELED</div>
+    <div id="created_by">Created by: <a href="https://smiterik.github.io" id="smite"></a></div>
+    <div id="main">
+        <div class="windows">
+            <div id="menu" class="window">
+                <div id="player">
+                    <label for="player_name">Player Name:</label>
+                    <input type="text" id="player_name"  maxlength="20">
+                </div>
+                <div id="play_button" class="button">PLAY</div>
+                <div id="quit_button" class="button">QUIT</div>
+            </div>
+            <div id="leaderboard" class="window">
+                <span>LEADERBOARD</span>
+                <div id="board"></div>
+            </div>
+        </div>
+
+        <footer>
+            I do not own any of the original Bejeweled games. I made this game only and exclusively for the project of my multimedia course and for fun!
+        </footer>
+    </div>
+    <div id="game" style="display: none; opacity: 0;">
+        <div id="score_board">
+            <div>SCORE</div>
+            <div id="score">0</div>
+        </div>
+        <div id="container">
+            <div id="timer">
+                <div id="time"><div></div></div>
+                <span>90</span>
+            </div>
+            <div id="canvas"></div>
+        </div>
+        <div id="history_board">
+            <div>HISTORY</div>
+            <div id="history"></div>
+        </div>
+    </div>
+    <div id="shadow" style="display: none; opacity: 0;"></div>
+    <div id="game_over" class="window" style="display: none; opacity: 0;">
+        <div>TIME UP!</div>
+        <div>Score: 0</div>
+        <div id="menu_button" class="button">MAIN MENU</div>
+    </div>
+</body>
+</html>

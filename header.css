@@ -1,0 +1,66 @@
+:root {
+    --headerbottom: #212121;
+    --yellow: #FFD600;
+    --outline: #363636;
+}
+
+.header {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    font-size: 5vh;
+    height: 10vh;
+
+    background-image: linear-gradient(black, var(--headerbottom));
+
+    margin-bottom: 0.15em;
+    border-top: 0.05em solid var(--yellow);
+    border-bottom: 0.05em solid var(--yellow);
+}
+.logo {
+    background-image: url("SmitE Logo.png");
+    background-size: cover;
+    width: 1.25em;
+    height: 1.25em;
+    position: relative;
+    float: right;
+    top: 50%;
+    right: 0.25em;
+    transform: translateY(-50%);
+    border: 0.05em solid var(--outline);
+}
+.logo:hover {
+    box-shadow: 0 0 0.15em white;
+    cursor: pointer;
+}
+.logo:active {
+    outline: 0.025em solid white;
+    box-shadow: 0 0 0.3em white;
+}
+.header > a:first-child {
+    color: var(--yellow);
+    font-family: Arial, serif;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow:
+            -0.05em -0.05em 0 var(--outline),
+            0.05em -0.05em 0 var(--outline),
+            -0.05em 0.05em 0 var(--outline),
+            0.05em 0.05em 0 var(--outline);
+}
+.header > a:first-child:hover {
+    text-shadow: 0 0 0.5em white;
+    cursor: pointer;
+}
+.header > a:first-child:active {
+    text-shadow:
+            0 0 0.5em white,
+            0 0 0.7em white;
+}

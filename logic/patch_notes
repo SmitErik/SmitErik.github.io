@@ -1,0 +1,65 @@
+1.2.1
+Level design changes on Hard6, Hard8 and Hard9 levels. Stars are now easier to obtain and general level difficulties have been adjusted.
+
+1.2.0
+Logic's release on Steam
+:
+The save technique has been replaced with a Steam Cloud compatible one
+Steam Achievements have been created and added to the game
+:
+
+1.1.2
+Quality of life changes
+:
+Various UI animations have been modified so they now behave the same
+Fixed some camera movements in the Main Menu so they now work as intended
+Fixed a bug that would cause the game to freeze if you try to pause it before the selected level is properly loaded
+Changes have been made to some Hard levels, making them a shade easier to solve
+Fixed a bug that prevented the Hard Final Level intro from being skipped
+Miscellaneous other small updates and bug fixes
+:
+
+1.1.1
+Numerous bug fixes and some minor quality changes.
+
+1.1.0
+Patch: Boss.
+:
+Finished the very last level
+Music added. Finally
+Miscellaneous other updates and bug fixes
+:
+
+1.0.4
+Fixed Bob and Jack's Unique abilities and reworked the Push mechanic.
+:
+From now on, Bob can only move the Red Cube forwards and backwards
+Jack will now always pull the Yellow Cube towards him and grab it when it gets close
+From now on, you cannot move to the side while Pushing
+If the Red Cube is not standing straight, it slowly adjusts itself to a straight position when Pushed
+:
+
+1.0.3
+Lot of bug fixes.
+:
+From now on the Error Text will hide the Subtitles
+Fixed a bug where Eddy's Subtitle color would remain red even after returning to the Menu
+Fixed a bug where Eddy could not be rotated in the Character Selection screen
+From now on you can also select the character with an initial letter [R, L, B, J or E] or numbers [1, 2, 3, 4 or 5]
+Fixed some bugs where Pausing the game could cause Elevators to behave the way they should not
+Fixed some bugs that caused Retry to not load saves correctly
+Fixed the Render Distance color depending on Difficulty
+Changed the weight of some Red Cubes so now every Level is completable
+Fixed some character animations
+Fixed a bug when ALT+TABbing on the beginning of a Level cause the game to freeze
+Miscellaneous other updates and bug fixes
+:
+
+1.0.2
+Redesigned every Level with a different method, so now they're look nice on Linux too.
+
+1.0.1
+Added the version checker when entering the game and in the Options menu.
+
+1.0.0
+Made the whole game with a lot of bugs and things we better not talk about...

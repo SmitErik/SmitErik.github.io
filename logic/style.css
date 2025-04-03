@@ -1,0 +1,155 @@
+﻿@font-face {
+	src: url("/fonts/ARDARLING.ttf");
+	font-family: "AR DARLING";
+}
+
+:root {
+	--bg1: #4C8E84;
+	--bg2: #2E524B;
+	--textarea1: #8CCFC5;
+	--textarea2: #56938A;
+	--lightgray: #F0F0F0;
+	--turquoise: #00FFFF;
+	--blue: #0000FF;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	background-image: linear-gradient(var(--bg1), var(--bg2));
+}
+
+table {
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+td { padding: 0; }
+
+img { display: block; }
+
+#eddy {
+	width: 10%;
+	margin: 0 auto;
+}
+#lily {
+	width: 25%;
+	margin-left: auto;
+}
+#bob {
+	width: 22%;
+	margin-right: auto;
+}
+#jack {
+	width: 25%;
+	margin-left: auto;
+	margin-right: 5px;
+}
+#roby {
+	width: 40%;
+	margin-left: 5px;
+	margin-right: auto;
+}
+#title {
+	height: 13vh;
+	margin: 2vh auto;
+}
+
+.center > img { margin: 0 auto; }
+.left { width: 25vw; }
+.right { width: 25vw; }
+
+.textarea {
+	width: 50vw;
+	vertical-align: top;
+
+	border: 1px solid black;
+	background-image: linear-gradient(var(--textarea1), var(--textarea2));
+}
+.textarea > hr { margin: 8px 8px 2px; }
+.content {
+	overflow-y: auto;
+	height: 50vh;
+	margin: 0;
+	padding: 8px;
+	vertical-align: top;
+}
+
+.text {
+	margin: 10px auto 30px auto;
+	font: 48px Arial;
+	color: var(--lightgray);
+	text-shadow:
+			-1px -1px black,
+			1px -1px black,
+			-1px 1px black,
+			1px 1px black,
+			0 0 10px black;
+}
+.big { font-size: larger; }
+
+ul {
+	text-align: justify;
+	margin: 0.5em 4vw 0 4vw;
+	display: none;
+}
+.dropdown { margin-left: 0.5ch; }
+.dropdown:hover {
+	cursor: pointer;
+	color: blue;
+}
+.opened:before { content: "▲"; }
+.closed:before { content: "▼"; }
+
+.button {
+	display: block;
+	width: 160px;
+	height: 40px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: black;
+	border: 2px solid var(--turquoise);
+	font: 20px Arial;
+}
+.button:hover {	cursor: pointer; }
+.button > span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	left: 0;
+
+	color: var(--turquoise);
+	text-shadow:
+			-1px -1px 1px var(--blue),
+			1px -1px 1px var(--blue),
+			-1px 1px 1px var(--blue),
+			1px 1px 1px var(--blue);
+}
+#light {
+	display: none;
+	position: relative;
+	height: 100%;
+	background-color: var(--turquoise);
+	-webkit-mask-image: url("buttonlight.png");
+	-webkit-mask-size: 160px 40px;
+}
+.button:hover #light { display: block; }
+
+.patch {
+	margin-left: 20px;
+
+	font: 18px Arial;
+	color: black;
+	text-align: left;
+	text-shadow:
+			-1px -1px 1px var(--lightgray),
+			1px -1px 1px var(--lightgray),
+			-1px 1px 1px var(--lightgray),
+			1px 1px 1px var(--lightgray);
+}

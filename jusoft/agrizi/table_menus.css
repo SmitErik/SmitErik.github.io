@@ -1,0 +1,49 @@
+table {
+    width: 100%;
+    border: 0.1em solid white;
+}
+
+.search {
+    width: 40vw;
+    height: 200px;
+    background-color: deepskyblue;
+    border: 0.1em solid white;
+
+    font-size: 24px;
+
+    margin-bottom: 2em;
+}
+
+.filter {
+    width: 40vw;
+    height: 200px;
+    background-color: deepskyblue;
+    border: 0.1em solid white;
+
+    font-size: 24px;
+
+    margin-bottom: 2em;
+}
+
+.menus > button {
+    font-size: 24px;
+
+    height: 5em;
+    background-color: red;
+}
+.menus > button {
+    cursor: pointer;
+}
+
+#your_services {
+    display: block;
+}
+#new_service {
+    display: none;
+
+    border: 0.1em solid black;
+    background-color: #05B5B5;
+
+    margin: 0 10vw;
+    width: 80vw;
+}

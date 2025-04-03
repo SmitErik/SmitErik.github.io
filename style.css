@@ -1,0 +1,321 @@
+@font-face {
+	src: url("fonts/ARDARLING.ttf");
+	font-family: "AR DARLING";
+}
+@font-face {
+	src: url("fonts/ARBERKLEY.ttf");
+	font-family: "AR BERKLEY";
+}
+@font-face {
+	src: url("fonts/Copperplate Gothic Bold Regular.ttf");
+	font-family: "Copperplate Gothic";
+}
+@font-face {
+	src: url("fonts/Goudy Stout.ttf");
+	font-family: "Goudy Stout";
+}
+@font-face {
+	src: url("fonts/Palatino Linotype.ttf");
+	font-family: "Palatino Linotype";
+}
+@font-face {
+	src: url("fonts/Liberation Sans.ttf");
+	font-family: "Liberation Sans";
+}
+
+:root {
+	--bgline: #381500;
+	--yellow: #FFD600;
+	--outline: #363636;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	background-image: linear-gradient(-26deg, black, var(--bgline), black);
+}
+a { text-decoration: none; }
+
+ul {
+	list-style-type: none;
+	padding-left: 2vw;
+	height: 9vh;
+	margin: 2vh 0;
+
+	color: white;
+	font-family: Arial, serif;
+	font-weight: bold;
+	font-size: 7vh;
+}
+li::before {
+	content: "";
+	display: inline-block;
+	height: 9vh;
+	width: 9vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-right: 1.5vw;
+	background-position: center center;
+	vertical-align: bottom;
+}
+#construct::before { background-image: url("Construct2.png"); }
+#jquery::before { background-image: url("jQuery.png"); }
+#unity::before { background-image: url("Unity.png"); }
+
+.games {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0;
+}
+.game {
+	margin: 0 0 2vh 1.9vw;
+	width: 13vh;
+	height: 17vh;
+	position: relative;
+
+	text-align: center;
+
+	background-color: var(--outline);
+	border: 1vh solid var(--outline);
+
+	&:hover {
+		outline: 0.2vh solid var(--yellow);
+		box-shadow: 0 0 3vh var(--yellow);
+		cursor: pointer;
+	}
+	&:active {
+		outline-width: 0.4vh;
+		box-shadow: 0 0 5vh var(--yellow);
+	}
+}
+.game img {
+	position: relative;
+	height: 12vh;
+	width: 12vh;
+	object-fit: contain;
+
+	margin-bottom: 0.8vh;
+
+	display: block;
+	background-color: var(--outline);
+
+	&::before {
+		color: white;
+		font-weight: bold;
+		font-size: 3vh;
+		font-family: Arial, serif;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.title {
+	height: 4vh;
+	width: 100%;
+	line-height: 4vh;
+	margin: 0.2vh 0;
+	font-size: 2.7vh;
+
+	background-color: var(--outline);
+	border-top: 0.3vh solid black;
+	border-bottom: 0.3vh solid black;
+}
+.game:hover .title { border-color: var(--yellow); }
+.icons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3vh;
+	height: 12vh;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	color: #F0F0F0;
+	font-family: FontAwesome, serif;
+	font-style: normal;
+	font-size: 2vh;
+	line-height: 3vh;
+
+	& > span {
+		width: 3vh;
+		height: 3vh;
+		text-shadow:
+				0.15vh 0.15vh 0.15vh black,
+				-0.15vh 0.15vh 0.15vh black,
+				0.15vh -0.15vh 0.15vh black,
+				-0.15vh -0.15vh 0.15vh black;
+	}
+}
+.icon-computer:before { content: "\e4e5";}
+.icon-mobile:before { content: "\f3cd";}
+.icon-download:before { content: "\f019";}
+.icon-online:before { content: "\f0ac";}
+.icon-steam:before { content: "\f1b6";}
+.icon-silent:before { content: "\f6a9";}
+.icon-multi:before { content: "\f500";}
+.icon-finished:before { content: "\f058";}
+.icon-under-development:before { content: "\f085";}
+#maki {
+	font-family: IMPACT, serif;
+	color: #803B00;
+}
+#boing {
+	font-family: Segoe UI, serif;
+	color: #0000FF;
+}
+#autorunner {
+	font-family: Arial, serif;
+	color: #000000;
+	font-weight: bold;
+	font-style: italic;
+}
+#car {
+	font-family: "AR BERKLEY", serif;
+	color: #00FF00;
+}
+#pong {
+	font-family: "Segoe Script", serif;
+	color: #FFFFFF;
+}
+#racer {
+	font-family: "Segoe Script", serif;
+	color: #FF9900;
+	font-style: italic;
+}
+#epicfight {
+	font-size: 2.3vh;
+	font-family: "Lucida Console", serif;
+	color: #FF33FF;
+	font-weight: bold;
+	font-style: italic;
+}
+#classshooter {
+	font-size: 2.3vh;
+	font-family: "Palatino Linotype", serif;
+	color: #000000;
+	& > span { color: #FFFF00; }
+}
+#thedarklibrary {
+	font-size: 2vh;
+	font-family: "AR DARLING", serif;
+	color: #FFFFFF;
+	& > span {
+		text-shadow:
+				0 0 1.5vh white,
+				0 0 2.5vh white;
+	}
+}
+#oozeinvasion {
+	font-size: 2.3vh;
+	font-family: Arial, serif;
+	color: #FF0000;
+	font-weight: bold;
+	text-shadow: -0.3vh 0.2vh black;
+}
+#bejeweled {
+	font-size: 1.35vh;
+	font-family: "Goudy Stout", serif;
+	color: #c8e78b;
+	font-style: italic;
+	text-shadow:
+			0.1vh 0.1vh 0.15vh black,
+			0 0 1.5vh blue,
+			0 0 1vh #ffff00;
+}
+#hallobab, #game {
+	font-family: Arial, serif;
+	color: #FFFFFF;
+}
+#logic {
+	font-size: 3.7vh;
+	font-family: "AR DARLING", serif;
+	color: #FF00FF;
+	text-shadow:
+    		-0.2vh -0.2vh 0 #00FFFF,
+			0.2vh -0.2vh 0 #00FFFF,
+    		-0.2vh 0.2vh 0 #00FFFF,
+			0.2vh 0.2vh 0 #00FFFF;
+}
+#wildwars {
+	font-family: "Liberation Sans", serif;
+	font-weight: bold;
+	position: relative;
+	& > span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&:first-child {
+			-webkit-text-stroke: 0.2vh black;
+			color: black;
+			text-shadow: 0.3vh 0.2vh black;
+		}
+		&:last-child {
+			background: rgb(2,255,0);
+			background: linear-gradient(135deg, rgba(2,255,0,1) 0%, rgba(162,255,239,1) 33%, rgba(162,255,239,1) 66%, rgba(90,162,255,1) 100%);
+			background-clip: text;
+			color: transparent;
+		}
+	}
+}
+/*#gwent {
+	font-family: "Copperplate Gothic", serif;
+	color: #caa571;
+}
+.gwent-image {
+	background-color: transparent !important;
+	border-style: none !important;
+
+	margin-left: 1vh;
+
+	filter: drop-shadow(-0.4vh 0.4vh 0.1vh black);
+}*/
+
+#legend {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	padding: 0.6vh;
+
+	z-index: 1;
+
+	background-color: var(--outline);
+
+	color: #F0F0F0;
+	font-family: FontAwesome, serif;
+	font-style: normal;
+	font-size: 3vh;
+	line-height: 4vh;
+	text-align: left;
+}
+#legend:hover { cursor: pointer; }
+td:nth-child(1) { text-align: center; }
+td:nth-child(2) {
+	font-family: Arial, serif;
+	padding-left: 0;
+	opacity: 0;
+	font-size: 0;
+	visibility: collapse;
+
+	transition-property: padding-left, opacity, font-size, visibility;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+.icon-computer + td:before { content: "Playable on a computer"; }
+.icon-mobile + td:before { content: "Playable on a mobile"; }
+.icon-download + td:before { content: "Must be downloaded"; }
+.icon-steam + td:before { content: "Steam game"; }
+.icon-online + td:before { content: "Playable in a browser"; }
+.icon-silent + td:before { content: "Has no sound"; }
+.icon-multi + td:before { content: "Can be played by two players"; }
+.icon-finished + td:before { content: "Finished game"; }
+.icon-under-development + td:before { content: "The game is under development"; }
