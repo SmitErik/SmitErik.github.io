@@ -57,12 +57,12 @@ li:before {
 	width: 1.55em;
 }
 
-li :is(u, a) {
+li :is(u, a), a {
 	color: var(--color);
 	text-decoration: none;
 	position: relative;
 }
-li :is(u, a):hover {
+li :is(u, a):hover, a:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
