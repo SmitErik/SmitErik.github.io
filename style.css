@@ -22,6 +22,10 @@
 	src: url("fonts/Liberation Sans.ttf");
 	font-family: "Liberation Sans";
 }
+@font-face {
+	src: url("fonts/SATAM___.ttf");
+	font-family: "Satans Minions";
+}
 
 :root {
 	--bgline: #381500;
@@ -257,6 +261,7 @@ li::before {
 			-webkit-text-stroke: 0.2vh black;
 			color: black;
 			text-shadow: 0.3vh 0.2vh black;
+			user-select: none;
 		}
 		&:last-child {
 			background: rgb(2,255,0);
@@ -278,6 +283,29 @@ li::before {
 
 	filter: drop-shadow(-0.4vh 0.4vh 0.1vh black);
 }*/
+#diretorch {
+	font-size: 2.6vh;
+	font-family: "Satans Minions", serif;
+	position: relative;
+	& > span {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		&:first-child {
+			-webkit-text-stroke: 0.2vh #f87d1a;
+			color: black;
+			text-shadow: 0.2vh 0.1vh #681203;
+			user-select: none;
+		}
+		&:last-child {
+			background: linear-gradient(#a35616, #000000);
+			background-clip: text;
+			color: transparent;
+		}
+	}
+}
 
 #legend {
 	position: fixed;
@@ -317,5 +345,4 @@ td:nth-child(2) {
 .icon-online + td:before { content: "Playable in a browser"; }
 .icon-silent + td:before { content: "Has no sound"; }
 .icon-multi + td:before { content: "Can be played by two players"; }
-.icon-finished + td:before { content: "Finished game"; }
 .icon-under-development + td:before { content: "The game is under development"; }
