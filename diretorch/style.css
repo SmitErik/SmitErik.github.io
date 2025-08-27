@@ -1,5 +1,5 @@
 @font-face {
-    src: url("../fonts/SATAM___.ttf");
+    src: url("../fonts/Satans Minions.ttf");
     font-family: "Satans Minions";
 }
 
@@ -34,7 +34,7 @@ header {
         position: absolute;
         left: 0;
         width: 100%;
-        transform: translateY(50%);
+        transform: translateY(30%);
     }
 
     & > div {
