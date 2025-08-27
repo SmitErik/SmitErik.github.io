@@ -166,21 +166,24 @@ footer {
         margin-top: 10px;
     }
 
-    & .logo {
-        background-image: url("../SmitE Logo.png");
-        background-size: cover;
-        border: 0.05em solid #363636;
-
-        width: 80px;
-        height: 80px;
+    & > a {
         margin-left: 20px;
 
-        &:hover {
-            box-shadow: 0 0 5px white;
-        }
-        &:active {
-            outline: 1px solid white;
-            box-shadow: 0 0 10px white;
+        & > .logo {
+            background-image: url("../SmitE Logo.png");
+            background-size: cover;
+            border: 0.05em solid #363636;
+
+            width: 80px;
+            height: 80px;
+
+            &:hover {
+                box-shadow: 0 0 5px white;
+            }
+            &:active {
+                outline: 1px solid white;
+                box-shadow: 0 0 10px white;
+            }
         }
     }
 }
