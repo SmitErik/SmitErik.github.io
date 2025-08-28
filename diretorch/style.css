@@ -5,7 +5,9 @@
 
 body {
     background: rgb(121, 10, 6);
-    background: url("Background.png") no-repeat center fixed;
+    background:
+            url("Background.png") no-repeat center fixed,
+            url("Background-Low-Res.png") no-repeat center fixed;
     background-size: cover;
 
     text-align: center;
