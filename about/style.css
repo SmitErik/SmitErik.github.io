@@ -67,7 +67,7 @@ li :is(u, a):hover, a:hover {
 	cursor: pointer;
 }
 
-.tooltip {
+#tooltip {
 	visibility: hidden;
 	width: 200px;
 	background-color: #555;
@@ -85,7 +85,7 @@ li :is(u, a):hover, a:hover {
 	opacity: 0;
 	transition: opacity 0.3s;
 }
-.tooltip::after {
+#tooltip::after {
 	content: "";
 	position: absolute;
 	top: 100%;

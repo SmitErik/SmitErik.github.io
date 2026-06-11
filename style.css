@@ -45,9 +45,11 @@ a { text-decoration: none; }
 
 ul {
 	list-style-type: none;
-	padding-left: 2vw;
+	padding: 0.5vh 0 0.5vh 2vw ;
 	height: 9vh;
 	margin: 2vh 0;
+
+	background: linear-gradient(90deg,rgba(255, 214, 0, 0.2) 0%, rgba(255, 214, 0, 0) 40%, rgba(255, 214, 0, 0) 100%);
 
 	color: white;
 	font-family: Arial, serif;
@@ -65,9 +67,10 @@ li::before {
 	background-position: center center;
 	vertical-align: bottom;
 }
-#construct::before { background-image: url("Construct2.png"); }
-#jquery::before { background-image: url("jQuery.png"); }
 #unity::before { background-image: url("Unity.png"); }
+#jquery::before { background-image: url("jQuery.png"); }
+#construct::before { background-image: url("Construct2.png"); }
+#unityold::before { background-image: url("Unity-Old.png"); }
 
 .games {
 	display: flex;
@@ -166,85 +169,14 @@ li::before {
 .icon-multi:before { content: "\f500";}
 .icon-finished:before { content: "\f058";}
 .icon-under-development:before { content: "\f085";}
-#maki {
-	font-family: IMPACT, serif;
-	color: #803B00;
-}
-#boing {
-	font-family: Segoe UI, serif;
-	color: #0000FF;
-}
-#autorunner {
-	font-family: Arial, serif;
-	color: #000000;
-	font-weight: bold;
-	font-style: italic;
-}
-#car {
-	font-family: "AR BERKLEY", serif;
-	color: #00FF00;
-}
-#pong {
-	font-family: "Segoe Script", serif;
-	color: #FFFFFF;
-}
-#racer {
-	font-family: "Segoe Script", serif;
-	color: #FF9900;
-	font-style: italic;
-}
-#epicfight {
-	font-size: 2.3vh;
-	font-family: "Lucida Console", serif;
-	color: #FF33FF;
-	font-weight: bold;
-	font-style: italic;
-}
-#classshooter {
-	font-size: 2.3vh;
-	font-family: "Palatino Linotype", serif;
-	color: #000000;
-	& > span { color: #FFFF00; }
-}
-#thedarklibrary {
-	font-size: 2vh;
-	font-family: "AR DARLING", serif;
-	color: #FFFFFF;
-	& > span {
-		text-shadow:
-				0 0 1.5vh white,
-				0 0 2.5vh white;
-	}
-}
-#oozeinvasion {
-	font-size: 2.3vh;
-	font-family: Arial, serif;
-	color: #FF0000;
-	font-weight: bold;
-	text-shadow: -0.3vh 0.2vh black;
-}
-#bejeweled {
-	font-size: 1.35vh;
-	font-family: "Goudy Stout", serif;
-	color: #c8e78b;
-	font-style: italic;
-	text-shadow:
-			0.1vh 0.1vh 0.15vh black,
-			0 0 1.5vh blue,
-			0 0 1vh #ffff00;
-}
-#hallobab, #game {
-	font-family: Arial, serif;
-	color: #FFFFFF;
-}
 #logic {
 	font-size: 3.7vh;
 	font-family: "AR DARLING", serif;
 	color: #FF00FF;
 	text-shadow:
-    		-0.2vh -0.2vh 0 #00FFFF,
+			-0.2vh -0.2vh 0 #00FFFF,
 			0.2vh -0.2vh 0 #00FFFF,
-    		-0.2vh 0.2vh 0 #00FFFF,
+			-0.2vh 0.2vh 0 #00FFFF,
 			0.2vh 0.2vh 0 #00FFFF;
 }
 #wildwars {
@@ -305,6 +237,78 @@ li::before {
 			color: transparent;
 		}
 	}
+}
+#bejeweled {
+	font-size: 1.35vh;
+	font-family: "Goudy Stout", serif;
+	color: #c8e78b;
+	font-style: italic;
+	text-shadow:
+			0.1vh 0.1vh 0.15vh black,
+			0 0 1.5vh blue,
+			0 0 1vh #ffff00;
+}
+#maki {
+	-webkit-text-stroke: 0.05vh #ef9f5b;
+	font-family: IMPACT, serif;
+	color: #803B00;
+}
+#boing {
+	font-family: Segoe UI, serif;
+	color: #0000FF;
+}
+#autorunner {
+	font-family: Arial, serif;
+	color: #000000;
+	font-weight: bold;
+	font-style: italic;
+}
+#car {
+	font-family: "AR BERKLEY", serif;
+	color: #00FF00;
+}
+#pong {
+	font-family: "Segoe Script", serif;
+	color: #FFFFFF;
+}
+#racer {
+	font-family: "Segoe Script", serif;
+	color: #FF9900;
+	font-style: italic;
+}
+#epicfight {
+	font-size: 2.3vh;
+	font-family: "Lucida Console", serif;
+	color: #FF33FF;
+	font-weight: bold;
+	font-style: italic;
+}
+#classshooter {
+	font-size: 2.3vh;
+	font-family: "Palatino Linotype", serif;
+	color: #000000;
+	& > span { color: #FFFF00; }
+}
+#thedarklibrary {
+	font-size: 2vh;
+	font-family: "AR DARLING", serif;
+	color: #FFFFFF;
+	& > span {
+		text-shadow:
+				0 0 1.5vh white,
+				0 0 2.5vh white;
+	}
+}
+#oozeinvasion {
+	font-size: 2.3vh;
+	font-family: Arial, serif;
+	color: #FF0000;
+	font-weight: bold;
+	text-shadow: -0.3vh 0.2vh black;
+}
+#hallobab, #game {
+	font-family: Arial, serif;
+	color: #FFFFFF;
 }
 
 #legend {
