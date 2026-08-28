@@ -1,0 +1,289 @@
+/*Genshin Font*/
+@font-face {
+    font-family: genshin;
+    src: url(genshin.ttf);
+}
+
+html, body {
+    margin: 0;
+    overflow: hidden;
+}
+body {
+    width: 100dvw;
+    height: 100dvh;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+/*Disable image dragging*/
+img { pointer-events: none; }
+
+/*Hide YouTube video*/
+#youtube { display: none; }
+
+/*Gift Box*/
+#gift-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+
+    z-index: 10;
+
+    background: #ff8af9;
+    background: linear-gradient(140deg, rgba(255, 138, 249, 1) 0%, rgba(243, 69, 255, 1) 100%);
+    box-shadow: inset 0 0 10vh #37002d;
+
+    /*1st animation frame*/
+    &.open {
+        transition: transform 0.5s ease-in;
+        transform:
+                rotate(-5deg)
+                translate(-5vh, -2vw);
+    }
+    /*2nd animation frame*/
+    &.open2 {
+        transition: transform 3s;
+        transform:
+                rotate(-30deg)
+                translate(-200vh, -100vw);
+    }
+}
+
+/*Bow image*/
+#red-bow {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    -webkit-filter: drop-shadow(2px 5px 20px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 5px 20px rgba(0, 0, 0, 0.5));
+}
+
+/*Ribbons*/
+.ribbon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #810022;
+    -webkit-filter: drop-shadow(2px 5px 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 5px 10px rgba(0, 0, 0, 0.5));
+
+    /*Vertical line*/
+    &:first-of-type {
+        width: 8dvw;
+        height: 100dvh;
+        background: linear-gradient(90deg, rgba(129, 0, 34, 1) 0%, rgba(252, 0, 67, 1) 45%, rgba(252, 0, 67, 1) 55%, rgba(129, 0, 34, 1) 100%);
+    }
+    /*Horizontal line*/
+    &:last-of-type {
+        width: 100dvw;
+        height: 8dvw;
+        background: linear-gradient(0deg, rgba(129, 0, 34, 1) 0%, rgba(252, 0, 67, 1) 45%, rgba(252, 0, 67, 1) 55%, rgba(129, 0, 34, 1) 100%);
+    }
+}
+
+
+/*Happy Birthday background text*/
+#happy-birthday {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+}
+
+
+/*Cake Description*/
+#cake-desc-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+
+    justify-content: right;
+    align-items: center;
+
+    display: none;
+}
+#cake-desc {
+    padding: 10%;
+    height: 90vh;
+}
+
+
+/*Subtitles*/
+#subtitle-container {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+
+    text-align: center;
+    padding: 0.4em 0 1em;
+    color: #fff;
+    font-size: 1.25em;
+    font-family: genshin, serif;
+}
+#speaker {
+    display: block;
+    margin: 0 35px;
+    padding: 5px 0 10px;
+    font-size: 1.25em;
+
+    color: #fac20a;
+    border-bottom: 0.1em solid #fac20a;
+}
+#subtitle {
+    display: block;
+    margin: 10px 50px 0;
+    white-space: pre-line;
+}
+
+
+/*Character image container*/
+#images {
+    width: 100%;
+    height: 100dvh;
+    transform-origin: center;
+
+    /*initially hidden*/
+    &.hidden { transform: scale(0, 0); }
+    &.reveal {
+        transition: transform 1s;
+        transform: scale(1, 1);
+    }
+
+    /*All character image base property*/
+    & > img {
+        position: absolute;
+        height: auto;
+        -webkit-filter: drop-shadow(2px 5px 2px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(2px 5px 2px rgba(0, 0, 0, 0.5));
+
+        transition: filter 0.2s, scale 0.2s;
+
+        &.hover {
+            -webkit-filter: drop-shadow(0 0 20px #ffb225) drop-shadow(0 0 50px #FFC981);
+            filter: drop-shadow(0 0 20px #ffb225) drop-shadow(0 0 50px #FFC981);
+            scale: 1.1;
+        }
+    }
+}
+
+
+/*Left Side*/
+#kokomi {
+    left: calc(24 / 1920 * 100dvw);
+    top:  calc(20 / 1920 * 100dvw);
+    width: calc(411 / 1920 * 100dvw);
+    aspect-ratio: 411 / 498;
+}
+#yelan {
+    left: calc(377 / 1920 * 100dvw);
+    top:  calc(62 / 1920 * 100dvw);
+    width: calc(308 / 1920 * 100dvw);
+    aspect-ratio: 308 / 575;
+}
+#xiao {
+    left: calc(169 / 1920 * 100dvw);
+    top:  calc(153 / 1920 * 100dvw);
+    width: calc(419 / 1920 * 100dvw);
+    aspect-ratio: 419 / 604;
+}
+#kuki {
+    left: calc(379 / 1920 * 100dvw);
+    top:  calc(214 / 1920 * 100dvw);
+    width: calc(295 / 1920 * 100dvw);
+    aspect-ratio: 295 / 543;
+}
+#alyosha {
+    left: calc(46 / 1920 * 100dvw);
+    top:  calc(486 / 1920 * 100dvw);
+    width: calc(495 / 1920 * 100dvw);
+    aspect-ratio: 495 / 483;
+}
+#bennett {
+    left: calc(610 / 1920 * 100dvw);
+    top:  calc(136 / 1920 * 100dvw);
+    width: calc(237 / 1920 * 100dvw);
+    aspect-ratio: 237 / 465;
+}
+#xingqiu {
+    left: calc(473 / 1920 * 100dvw);
+    top:  calc(286 / 1920 * 100dvw);
+    width: calc(296 / 1920 * 100dvw);
+    aspect-ratio: 296 / 558;
+}
+#alhaitham {
+    left: calc(579 / 1920 * 100dvw);
+    top:  calc(269 / 1920 * 100dvw);
+    width: calc(404 / 1920 * 100dvw);
+    aspect-ratio: 404 / 629;
+}
+
+/*Right Side*/
+#citlali {
+    left: calc(1297 / 1920 * 100dvw);
+    top:  calc(19 / 1920 * 100dvw);
+    width: calc(334 / 1920 * 100dvw);
+    aspect-ratio: 334 / 430;
+}
+#kinich {
+    left: calc(1508 / 1920 * 100dvw);
+    top:  calc(-21 / 1920 * 100dvw);
+    width: calc(424 / 1920 * 100dvw);
+    aspect-ratio: 424 / 561;
+}
+#xiangling {
+    left: calc(1360 / 1920 * 100dvw);
+    top:  calc(97 / 1920 * 100dvw);
+    width: calc(356 / 1920 * 100dvw);
+    aspect-ratio: 356 / 543;
+}
+#odette {
+    left: calc(1495 / 1920 * 100dvw);
+    top:  calc(246 / 1920 * 100dvw);
+    width: calc(345 / 1920 * 100dvw);
+    aspect-ratio: 345 / 605;
+}
+#yae-miko {
+    left: calc(1108 / 1920 * 100dvw);
+    top:  calc(239 / 1920 * 100dvw);
+    width: calc(430 / 1920 * 100dvw);
+    aspect-ratio: 430 / 536;
+}
+#qiqi {
+    left: calc(1323 / 1920 * 100dvw);
+    top:  calc(435 / 1920 * 100dvw);
+    width: calc(256 / 1920 * 100dvw);
+    aspect-ratio: 256 / 411;
+}
+#cyno {
+    left: calc(1368 / 1920 * 100dvw);
+    top:  calc(427 / 1920 * 100dvw);
+    width: calc(550 / 1920 * 100dvw);
+    aspect-ratio: 550 / 555;
+}
+#zhongli {
+    left: calc(921 / 1920 * 100dvw);
+    top:  calc(270 / 1920 * 100dvw);
+    width: calc(549 / 1920 * 100dvw);
+    aspect-ratio: 549 / 638;
+}
+
+/*Middle*/
+#paimon {
+    left: calc(776 / 1920 * 100dvw);
+    top:  calc(90 / 1920 * 100dvw);
+    width: calc(411 / 1920 * 100dvw);
+    aspect-ratio: 411 / 666;
+}
